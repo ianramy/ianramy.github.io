@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const contactButton = document.getElementById("contact-button");
-    contactButton.addEventListener("click", function() {
-        alert("Thank you for your interest! I will get back to you soon.");
-    });
-});
+const list = document.querySelectorAll(".list");
+function activeLink() {
+list.forEach((item) => item.classList.remove("active"));
+  this.classList.add("active");
+}
+list.forEach((item) => item.addEventListener("click", activeLink));

@@ -1,113 +1,268 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
-/* class : all the elements with the same class name will receive this styling */
-#header{
-  color: orange;
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* 
+:root {
+  --clr: #000;
+  --icon-color: #fff;
+  --text-color: #000;
+} */
+
+/* Body Styling */
+body {
+  color: #7d8597;
+  display: block;
+  min-height: 100vh;
+  background-color: #011627;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Navigation Menu */
+.navigation {
+  position: fixed;
+  top: 35px;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+  z-index: 1000;
+  /* background-color: #011627; */
+}
+
+.navigation ul {
+  display: flex;
+  padding: 0;
+  width: 400px;
+  margin: auto;
+}
+
+.navigation ul li {
+  list-style: none;
+  width: 70px;
+  height: 80px;
+  z-index: 1;
+}
+
+.navigation ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.navigation ul li a .icon {
+  font-size: 1.5em;
+  line-height: 75px;
+  color: #ffd700;
+  transition: transform 0.5s;
+}
+
+.navigation ul li.active a .icon {
+  transform: translateY(-20px);
+  padding: 0;
+}
+
+.navigation ul li a .text {
+  color: #ffd700;
+  font-size: 17px;
+  font-weight: 350;
+  transition: opacity 0.5s, transform 0.5s;
+  opacity: 1;
+  margin: 0;
+}
+
+.navigation ul li.active a .text {
+  opacity: 1;
+  transform: translateY(-28px);
+}
+
+.perspective-questions{
+  padding: 10px 10px 0 0;
+}
+
+/* Indicator */
+.indicator {
+  position: absolute;
+  padding: 0;
+  top: -30%;
+  width: 70px;
+  height: 70px;
+  background: #486584;
+  border-radius: 50%;
+  border: 6px;
+  transition: transform 0.5s;
+}
+
+.indicator::before,
+.indicator::after {
+  content: "";
+  position: relative;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-radius: 50%;
+}
+
+.indicator::before {
+  left: -20px;
+}
+
+.indicator::after {
+  right: -20px;
+}
+
+/* Indicator Transitions */
+.navigation ul li:nth-child(1).active ~ .indicator {
+  transform: translateX(calc(70px * 0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator {
+  transform: translateX(calc(70px * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator {
+  transform: translateX(calc(70px * 2));
+}
+
+.navigation ul li:nth-child(4).active ~ .indicator {
+  transform: translateX(calc(70px * 3));
+}
+
+.navigation ul li:nth-child(5).active ~ .indicator {
+  transform: translateX(calc(70px * 4));
+}
+
+#about, #skill, #award {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+#skills, #contact {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 20px;
+}
+
+#skills .icon-container {
+  display: block;
+  gap: 40px;
+}
+
+#skills ion-icon {
+  font-size: 5rem; /* Adjust this value to make icons larger */
+  margin: 20px;
+}
+
+
+#contact {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 20px;
+}
+
+/* Header and Section Styling */
+
+
+#headerIntro {
+  margin: 8rem;
+  color: #800020;
   font-style: italic;
+  font-family: "Muli", sans-serif;
 }
-#paraIntro {
-    color: white;
-    font-size: 1.25rem;
+#headerIntroEnd {
+  margin: auto;
+  color: #800020;
+  font-style: italic;
+  font-family: "Muli", sans-serif;
 }
-#skills {
-    color: white;
-    font-size:1.25rem;
-}
-#paraOutro {
-    color: white;
-    font-size: 1.25rem;
-    }
-.NavBar {
-    display: flex;
-}
-.headName {
-    color:brown;
-    font-size: 3rem;
-}
-.Name {
-    color: white;
-    font-size: 3rem;
-}
-.icon-bar a {
-    float: left; /* Float links side by side */
-    text-align: center; /* Center-align text */
-    width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
-    padding: 12px 0; /* Some top and bottom padding */
-    transition: all 0.3s ease; /* Add transition for hover effects */
-    color: rgba(255, 255, 255, 0.196); /* White text color */
-    font-size: 25px; /* Increased font size */
-    
-  }
-  
-  .icon-bar a:hover {
-    background-color: rgba(0, 128, 0, 0.404); /* Add a hover color */
-  }
-  
-  .active {
-    background-color: green; /* Add an active/current color */
-  }
-  body {
-   color: white;
-    /* The image used */
-    background-image: url("Website.jpg");
-    
-  
-    /* Full height */
-    height: 100%;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 
-  /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
-.social-bar {
-    position:fixed;
-    top: 99%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-  
-  /* Style the icon bar links */
-  .social-bar a {
-    text-align: center;
-    padding: 6px;
-    transition: all 0.3s ease;
-    color: rgba(255, 255, 255, 0.432);
-    font-size: 15px;
-  }
-  /* Style the social media icons with color, if you want */
-.social-bar a:hover {
-    background-color: #000;
-  }
-  
-  .facebook {
-    background: #064ce398;
-    color: white;
-  }
-  
-  .twitter {
-    background: #4ba7ec7c;
-    color: white;
-  }
-  
-  .google {
-    background: #dd4c3989;
-    color: white;
-  }
-  
-  .linkedin {
-    background: #007cb5b9;
-    color: white;
-  }
-  
-  .youtube {
-    background: #bb000084;
-    color: white;
-  }
+#paraIntro, #skills, #paraOutro {
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+#paraIntroEnd {
+  font-size: 1.15rem;
+}
+
+#headerOutro {
+  margin: 3rem;
+  color: #800020;
+  font-style: italic;
+  font-family: "Muli", sans-serif;
+}
+
+#paraOutroEnd {
+  margin: 2;
+}
+
+.headName {
+  color: #800020;
+  font-size: 4rem;
+}
+
+.Name {
+  color: #708090;
+  font-size: 4rem;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-style: italic;
+  padding: 30px;
+}
+
+#contact .icon-container {
+  display: flex;
+  gap: 40px;
+}
+
+#contact ion-icon {
+  padding: 20px 20px;
+  font-size: 3.5rem; /* Adjust this value to make icons larger */
+  margin: 40px;
+  gap: 10px;
+}
+
+.avatar {
+  width: 195px; /* Adjust avatar size */
+  height: 195px; /* Adjust avatar size */
+  border-radius: 50%; /* Make avatar round */
+  margin-top: 80px;
+  cursor: text;
+  border: #0000;
+}
