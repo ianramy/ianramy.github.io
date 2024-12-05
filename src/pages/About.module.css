@@ -1,0 +1,168 @@
+/* src/pages/About.module.css */
+/* Container Styling */
+.container {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1rem;
+  margin: 0.5rem 0 1.5rem 0;
+  color: #555;
+}
+
+/* Card Container */
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+}
+
+/* Card Styling */
+.card {
+  width: 80%;
+  height: 200px;
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+}
+
+.cardFront,
+.cardBack {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.6s ease-in-out;
+}
+
+.cardFront {
+  transform: rotateY(0deg);
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Flipped State */
+.flipped .cardFront {
+  transform: rotateY(-180deg);
+}
+
+.flipped .cardBack {
+  transform: rotateY(0deg);
+}
+
+/* Card Content */
+.cardImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.cardBody {
+  padding: 10px;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: bold;
+}
+
+.cardText {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+/* Responsive Design */
+
+/* Medium Screens (Up to 768px) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    height: 250px;
+  }
+
+  .cardImage {
+    height: auto;
+  }
+
+  .cardBody {
+    padding: 8px;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+
+  .cardText {
+    font-size: 0.8rem;
+  }
+}
+
+/* Small Screens (Up to 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .card {
+    height: 200px;
+  }
+
+  .cardFront,
+  .cardBack {
+    padding: 10px;
+  }
+
+  .cardBody {
+    padding: 5px;
+  }
+
+  .cardTitle {
+    font-size: 0.9rem;
+  }
+
+  .cardText {
+    font-size: 0.7rem;
+  }
+}

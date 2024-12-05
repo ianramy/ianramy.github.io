@@ -1,0 +1,175 @@
+/* src/pages/Projects.module.css */
+/* Container Styling */
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+}
+
+/* Card Styling */
+.card {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.cardFront,
+.cardBack {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  background: #fff;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardFront {
+  transform: rotateY(0);
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+  background: #f7f7f7;
+}
+
+/* Flipped State */
+.card.flipped .cardFront {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .cardBack {
+  transform: rotateY(0);
+}
+
+/* Icon Styling */
+.icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  fill: #555; /* Color for icons */
+}
+
+/* Title Styling */
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Description Styling */
+.cardText {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  margin: 10px 0;
+  line-height: 1.4;
+}
+
+/* Link Styling */
+.cardLink {
+  font-size: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.cardLink:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+
+/* Small Screens (Up to 600px) */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .cardFront,
+  .cardBack {
+    height: 250px;
+    padding: 15px;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+
+  .cardText {
+    font-size: 0.9rem;
+  }
+
+  .cardLink {
+    font-size: 0.9rem;
+  }
+}
+
+/* Medium Screens (601px to 1024px) */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .cardFront,
+  .cardBack {
+    height: 280px;
+    padding: 18px;
+  }
+
+  .icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .cardTitle {
+    font-size: 1.1rem;
+  }
+
+  .cardText {
+    font-size: 0.95rem;
+  }
+}
