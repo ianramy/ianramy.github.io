@@ -5,10 +5,10 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Ensures padding and border are included in element width/height */
+  box-sizing: border-box; 
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 350;
   font-style: normal;
 }
 
@@ -26,10 +26,10 @@ body {
 
 /* Headings */
 h1, h2, h3 {
-  color: #2c3e50; /* Consistent heading color */
-  font-family: "Jost", sans-serif; /* Use a different font for headings for better contrast */
+  font-weight: bold;
+  color: #555; /* Consistent heading color */
   font-weight: 500; /* Bold headings */
-  margin-bottom: 1rem; /* Consistent spacing */
+  margin-bottom: 0.7rem; /* Consistent spacing */
   line-height: 1.4;
 }
 

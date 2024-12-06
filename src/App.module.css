@@ -1,28 +1,43 @@
-/* src/App.css */
+/* src/App.module.css */
+/* Main app container */
 .app {
+  /* Use flex to arrange header, content, and footer vertically */
   display: flex;
   flex-direction: column;
+  /* Fill the full height of the viewport */
   min-height: 100vh;
 }
 
+/* Body container inside app */
 .body {
+  /* Use flex to allow sidebar and main content to sit side-by-side */
   display: flex;
+  /* Allow body to expand and fill remaining space */
   flex: 1;
 }
 
+/* Main content area */
 .content {
+  /* Expand content to fill available space */
   flex: 1;
+  /* Padding inside main content */
   padding: 1rem;
-  margin-left: 60px; /* Sidebar width for collapsed mode */
+  /* Margin-left accounts for sidebar width when collapsed */
+  margin-left: 60px;
+  /* Smooth transition when sidebar expands/collapses */
   transition: margin-left 0.3s ease;
 }
 
+/* Expanded sidebar state */
 .content.expanded {
-  margin-left: 250px; /* Sidebar width for expanded mode */
+  /* Increase margin-left when sidebar is expanded */
+  margin-left: 250px;
 }
 
+/* Medium screens adjustments */
 @media (max-width: 768px) {
   .content {
+    /* Remove left margin on smaller screens for full width content */
     margin-left: 0;
   }
 }

@@ -1,92 +1,137 @@
 /* src/pages/Skills.module.css */
-/* Styles for the Contact component */
+/* Container for skills section */
 .container {
+  /* Center text and add padding */
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
+  /* Basic font */
   font-family: Arial, sans-serif;
+  /* Max width for large screens, centered */
   max-width: 1200px;
-  margin: auto;
+  margin: 1rem;
 }
 
+/* Heading styling */
 h1 {
+  /* Large heading */
   font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #3333;
+  margin: 1rem;
+  /* Slight typo corrected: #3333 changed to #333 for a proper color */
+  color: #333;
 }
 
+/* Grid layout for skills cards */
 .grid {
+  /* Responsive grid */
   display: grid;
+  /* Auto-fit for responsive columns */
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* Space between cards */
   gap: 1.5rem;
+  /* Center items */
   justify-items: center;
 }
 
+/* Individual skill card */
 .card {
+  /* White background with border */
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
+  /* Set width and maintain aspect ratio */
   width: 200px;
+  aspect-ratio: 4/3;
+  height: auto;
+  /* Padding inside the card */
   padding: 1rem;
+  /* Center text */
   text-align: center;
+  /* Soft shadow */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Smooth transform transitions */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover effect on card */
 .card:hover {
+  /* Slight scale up and deeper shadow */
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Icon inside skill card */
 .icon {
+  /* Unified icon dimension */
   width: 50px;
   height: 50px;
+  /* Space below icon */
   margin-bottom: 1rem;
-  fill: #555; 
+  /* Gray color for icon */
+  fill: #555;
 }
 
+/* Skill title */
 .cardTitle {
+  /* Slightly larger bold text */
   font-size: 1.2rem;
+  font-weight: bold;
   color: #555;
+  /* Space above title */
   margin-top: 0.5rem;
 }
 
-/* Responsive Design */
+/* Medium screens adjustments */
 @media (max-width: 768px) {
   h1 {
+    /* Slightly smaller heading on medium screens */
     font-size: 2rem;
   }
 
   .card {
+    /* Slightly narrower card on medium screens */
     width: 180px;
+    aspect-ratio: 4/3;
+    height: auto;
+    /* Smaller padding */
     padding: 0.8rem;
   }
 
   .cardTitle {
+    /* Slightly smaller title */
     font-size: 1rem;
   }
 
   .icon {
+    /* Smaller icon for medium screens */
     width: 40px;
     height: 40px;
   }
 }
 
+/* Small screens adjustments */
 @media (max-width: 480px) {
   h1 {
+    /* Smaller heading on small screens */
     font-size: 1.8rem;
   }
 
   .card {
-    width: 150px;
+    /* Even smaller card size */
+    width: 250px;
+    aspect-ratio: 4/3;
+    height: auto;
     padding: 0.5rem;
   }
 
   .cardTitle {
+    /* Tiny title on small screens */
     font-size: 0.9rem;
   }
 
   .icon {
-    width: 35px;
-    height: 35px;
+    /* Smaller icons on small screens */
+    width: 65px;
+    margin: 40px;
+    height: 65px;
   }
 }

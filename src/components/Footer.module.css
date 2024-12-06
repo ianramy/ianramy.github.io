@@ -1,28 +1,43 @@
 /* src/components/Footer.module.css */
+/* Footer section styling */
 .footer {
+  /* Align footer content centrally */
   text-align: center;
+  /* Minimal padding around text */
   padding: 1px;
+  /* Semi-transparent background for subtle styling */
   background-color: #f8f9faae;
+  /* Fix footer to the bottom of the page */
   position: fixed;
   bottom: 0;
+  /* Footer spans full width of viewport */
   width: 100%;
+  /* Set a consistent footer height */
   height: 6.5%;
 }
 
+/* Text styling within the footer */
 .text {
+  /* Standard font size for footer text */
   font-size: 1rem;
+  /* Grayish text color for readability */
   color: #555;
+  /* Slight padding for spacing */
   padding: 1px;
 }
 
+/* Medium screen adjustments */
 @media (max-width: 768px) {
   .text {
+    /* Slightly smaller text for medium screens */
     font-size: 0.9rem;
   }
 }
 
+/* Small screen adjustments */
 @media (max-width: 480px) {
   .text {
+    /* Even smaller text for small screens */
     font-size: 0.8rem;
   }
 }

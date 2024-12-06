@@ -20,7 +20,7 @@ const About = () => {
 				My experience spans various technologies, and I am always eager to learn
 				and grow.
 			</p>
-			<div className={styles.cardContainer}>
+			<div className={styles.grid}>
 				{/* Poetry Card */}
 				<div
 					className={`${styles.card} ${

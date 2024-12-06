@@ -1,8 +1,8 @@
 // src/App.js
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/header";
-import Sidebar from "./components/sidebar";
+// import Sidebar from "./components/sidebar";
 import Footer from "./components/footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -10,7 +10,7 @@ import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import styles from "./App.module.css"; // Importing CSS module
+import styles from "./App.module.css"; 
 
 const App = () => {
 	return (
@@ -18,7 +18,7 @@ const App = () => {
 			<div className={styles.app}>
 				<Header />
 				<div className={styles.body}>
-					<Sidebar />
+					{/* <Sidebar /> */}
 					<main className={styles.content}>
 						<Routes>
 							<Route
