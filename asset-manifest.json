@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.31f43423.css",
+    "main.js": "/static/js/main.2a22c0df.js",
+    "static/js/453.253ccfac.chunk.js": "/static/js/453.253ccfac.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "static/media/logo_react.svg": "/static/media/logo_react.18a078688112fe97bd7c3b5250e95922.svg",
+    "static/media/logo_nodejs.svg": "/static/media/logo_nodejs.b833b270312100720ca5027688032856.svg",
+    "static/media/server_sharp.svg": "/static/media/server_sharp.a81a941d0339fdab08b3af5e1b2d0693.svg",
+    "static/media/logo_playstation.svg": "/static/media/logo_playstation.a1493b62b04947b5a29302a4e41e56aa.svg",
+    "static/media/logo_whatsapp.svg": "/static/media/logo_whatsapp.001c71e7748d8b38420e463a3b126901.svg",
+    "static/media/logo_python.svg": "/static/media/logo_python.aa079233b540e7440bd9d479307960b1.svg",
+    "static/media/ticket_outline.svg": "/static/media/ticket_outline.f8065566a0ac93f77f17237711fb3706.svg",
+    "static/media/logo_github.svg": "/static/media/logo_github.f0843d48b095543a71d4e4f6809ca9d6.svg",
+    "index.html": "/index.html",
+    "static/media/id_card_outline.svg": "/static/media/id_card_outline.e93275233816ff0267e07c27182c8f19.svg",
+    "static/media/layers_outline.svg": "/static/media/layers_outline.5ceda8365bb3f5030d71070d60ebb2eb.svg",
+    "static/media/logo_javascript.svg": "/static/media/logo_javascript.3283016999b7c3970a9dc148108159e0.svg",
+    "static/media/logo_twitter.svg": "/static/media/logo_twitter.0b04117cb482dfccdae5af83f592f8d3.svg",
+    "static/media/logo_linkedin.svg": "/static/media/logo_linkedin.afa128b66f32a0f76622bb869d2a8e0b.svg",
+    "static/media/list_outline.svg": "/static/media/list_outline.7ab3a93c0001e6f4c5a55dc59db1f559.svg",
+    "static/media/trophy_sharp.svg": "/static/media/trophy_sharp.e1392ecc4c672dde0ef9ce23ddb1056a.svg",
+    "static/media/logo_instagram.svg": "/static/media/logo_instagram.b15bc616029fa0ee5c09334bd2d75d12.svg",
+    "static/media/home_outline.svg": "/static/media/home_outline.b75ebff19fd21272c789b080e40da770.svg",
+    "static/media/send_outline.svg": "/static/media/send_outline.836ec51aaf27d06134256e601e1e99f7.svg",
+    "static/media/logo_npm.svg": "/static/media/logo_npm.99544fce7c572dbb11f6d10704568930.svg",
+    "static/media/medal-sharp.svg": "/static/media/medal-sharp.b244686c9f379519c7c47772eb892b53.svg",
+    "static/media/logo_css3.svg": "/static/media/logo_css3.4eb6c56fea983e3fbe54d053bbd52591.svg",
+    "static/media/logo_html5.svg": "/static/media/logo_html5.0b82e4dac95f2d8597fbcdab65bad510.svg",
+    "static/media/school-sharp.svg": "/static/media/school-sharp.8e010397716c3185c52fc3820d556e88.svg",
+    "static/media/star_outline.svg": "/static/media/star_outline.3fddae62d5caa89177fd669c58167c94.svg",
+    "main.31f43423.css.map": "/static/css/main.31f43423.css.map",
+    "main.2a22c0df.js.map": "/static/js/main.2a22c0df.js.map",
+    "453.253ccfac.chunk.js.map": "/static/js/453.253ccfac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31f43423.css",
+    "static/js/main.2a22c0df.js"
+  ]
+}
