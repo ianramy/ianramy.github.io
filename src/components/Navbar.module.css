@@ -1,0 +1,131 @@
+/* src/components/Navbar.module.css */
+
+/* Header container styling */
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 100;
+}
+
+/* Navigation container */
+.nav {
+  /* Max width for centering */
+  max-width: 1000px;
+  /* Center horizontally */
+  margin: auto;
+  /* Use flex for horizontal layout */
+  display: flex;
+  justify-content: center;
+  /* Padding around nav items */
+  padding: 0.5rem 1rem;
+}
+
+/* Unordered list for nav links */
+.navList {
+  /* Flex layout for horizontal menu */
+  display: flex;
+  /* Remove default list style */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* Spacing between items */
+  gap: 1.5rem;
+}
+
+/* Individual list items */
+.list {
+  /* Position relative for potential dropdowns or effects */
+  position: relative;
+}
+
+/* Nav link styling */
+.navLink {
+  /* Stack icon and text vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* No underline */
+  text-decoration: none;
+  /* Gray text */
+  color: #555;
+  /* Medium font size */
+  font-size: 1.9rem;
+  /* Smooth transitions */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect on nav link */
+.navLink:hover {
+  /* Change color on hover */
+  color: #007bff;
+}
+
+/* Icon inside nav link */
+.icon {
+  /* Unified icon dimensions for consistency */
+  width: 30px;
+  height: 30px;
+  /* Space below icon */
+  margin-bottom: 0.3rem;
+  /* Gray fill for icons */
+  fill: #555;
+  /* Smooth fill transition */
+  transition: fill 0.3s ease;
+}
+
+/* Hover effect on icon */
+.navLink:hover .icon {
+  /* Highlight icon color on hover */
+  fill: #007bff;
+}
+
+/* Text below the icon in nav link */
+.text {
+  /* Smaller font for nav text */
+  font-size: 1.2rem;
+}
+
+/* Medium screens adjustments */
+@media (max-width: 768px) {
+  .navList {
+    /* Reduce gap on smaller screens */
+    gap: 1rem;
+  }
+
+  .navLink {
+    /* Slightly smaller font */
+    font-size: 0.8rem;
+  }
+
+  .icon {
+    /* Slightly smaller icons on medium screens */
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Small screens adjustments */
+@media (max-width: 480px) {
+  .nav {
+    /* Less padding on small screens */
+    padding: 0.5rem;
+  }
+
+  .navList {
+    /* Closer spacing */
+    gap: 0.5rem;
+  }
+
+  .icon {
+    /* Even smaller icons on small screens */
+    width: 35px;
+    height: 35px;
+  }
+
+  .text {
+    /* Tiny text on small screens */
+    font-size: 1rem;
+  }
+}

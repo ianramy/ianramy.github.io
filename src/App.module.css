@@ -1,0 +1,29 @@
+/* src/App.module.css */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+}
+
+.content {
+    flex: 1;
+    padding: 1rem;
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+.content.expanded {
+  margin-left: 250px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+  }
+}

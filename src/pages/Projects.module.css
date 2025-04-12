@@ -1,0 +1,92 @@
+/* src/pages/Projects.module.css */
+
+.container {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.projectList {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.projectRow {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.projectRow.reverse {
+    flex-direction: row-reverse;
+}
+
+.projectImageWrapper {
+    flex: 1 1 45%;
+    text-align: center;
+}
+
+.projectImage {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.projectText {
+    flex: 1 1 45%;
+    text-align: left;
+}
+
+.projectTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+
+.projectDescription {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    white-space: pre-line;
+}
+
+.projectLink {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.imageCredit {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 0.25rem;
+    display: block;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .projectRow,
+    .projectRow.reverse {
+        flex-direction: column;
+    }
+
+    .projectText {
+        text-align: center;
+    }
+
+    .projectImage {
+        max-width: 100%;
+    }
+}
