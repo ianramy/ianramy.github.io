@@ -27,7 +27,7 @@ const socials = [
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/ian-ramy-91b1ab32b/",
+    href: "https://www.linkedin.com/in/ian-ramy/",
     icon: <LinkedIn className={`${styles.icon} ${styles.linkedin}`} />,
   },
 ];
