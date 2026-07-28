@@ -1,0 +1,80 @@
+/* src/styles/global.css */
+@import "tailwindcss";
+
+@theme {
+	--font-heading: "Clash Display", "Syne", sans-serif;
+	--font-body: "Inter", sans-serif;
+	--font-mono: "Geist Mono", "JetBrains Mono", monospace;
+	--ease-signature: cubic-bezier(0.76, 0, 0.24, 1);
+	--tracking-heading: -0.06em;
+}
+
+/* LIGHT MODE (Default) - Inverted Obsidian */
+:root {
+	--color-bg-base: #ffffff;
+	--color-text-primary: #000000;
+	--color-text-secondary: #666666;
+	--color-border-grid: #e5e5e5;
+	--color-accent: #000000;
+	--logo-filter: invert(0);
+
+	background-color: var(--color-bg-base);
+	color: var(--color-text-primary);
+}
+
+/* DARK MODE - Pure Obsidian */
+.dark {
+	--color-bg-base: #000000;
+	--color-text-primary: #ffffff;
+	--color-text-secondary: #888888;
+	--color-border-grid: #262626;
+	--color-accent: #ffffff;
+	--logo-filter: invert(1);
+
+	background-color: var(--color-bg-base);
+	color: var(--color-text-primary);
+}
+
+/*
+  Global Resets & Typographic Polish
+*/
+html,
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: var(--color-bg-base);
+	color: var(--color-text-primary);
+	/* Prevent horizontal scroll bounce on Mac */
+	overscroll-behavior-x: none;
+}
+
+/*
+  Premium Selection Inversion
+  Instead of default blue highlighting, selected text exactly inverts
+*/
+::selection {
+	background-color: var(--color-text-primary);
+	color: var(--color-bg-base);
+}
+
+/*
+  Hide scrollbars for a strict, edge-to-edge architectural feel
+  (We rely on Lenis smooth scroll or native scroll anyway)
+*/
+::-webkit-scrollbar {
+	width: 0px;
+	background: transparent;
+}
+
+/*
+  Utility class for native line clamping
+  (Tailwind v4 handles this natively via `line-clamp-3`,
+  but keeping this if you prefer custom CSS clamps)
+*/
+.clamp-3 {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}

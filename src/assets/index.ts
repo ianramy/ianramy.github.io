@@ -1,0 +1,34 @@
+// src/assets/index.ts
+
+export { default as Bootstrap } from "@/assets/icons/logo_bootstrap.svg";
+export { default as C } from "@/assets/icons/logo_c.svg";
+export { default as Cpp } from "@/assets/icons/logo_c++.svg";
+export { default as CSharp } from "@/assets/icons/logo_csharp.svg";
+export { default as CSS } from "@/assets/icons/logo_css3.svg";
+export { default as Discord } from "@/assets/icons/logo_discord.svg";
+export { default as Facebook } from "@/assets/icons/logo_facebook.svg";
+export { default as Figma } from "@/assets/icons/logo_figma.svg";
+export { default as Flask } from "@/assets/icons/logo_flask.svg";
+export { default as Git } from "@/assets/icons/logo_git.svg";
+export {
+	default as Github,
+	default as GitHub,
+} from "@/assets/icons/logo_github.svg";
+export { default as HTML } from "@/assets/icons/logo_html5.svg";
+export { default as Instagram } from "@/assets/icons/logo_instagram.svg";
+export { default as Javascript } from "@/assets/icons/logo_javascript.svg";
+export { default as LinkedIn } from "@/assets/icons/logo_linkedin.svg";
+export { default as MySQL } from "@/assets/icons/logo_mysql.svg";
+export { default as Node } from "@/assets/icons/logo_nodejs.svg";
+export { default as Npm } from "@/assets/icons/logo_npm.svg";
+export { default as PostgreSQL } from "@/assets/icons/logo_postgres.svg";
+export { default as Pycharm } from "@/assets/icons/logo_pycharm.svg";
+export { default as Python } from "@/assets/icons/logo_python.svg";
+export { default as React2 } from "@/assets/icons/logo_react.svg";
+export { default as Redux } from "@/assets/icons/logo_redux.svg";
+export { default as SqlAlchemy } from "@/assets/icons/logo_sqlalchemy.svg";
+export { default as Sqlite } from "@/assets/icons/logo_sqlite.svg";
+export { default as TypeScript } from "@/assets/icons/logo_typescript.svg";
+export { default as Vite } from "@/assets/icons/logo_vite.svg";
+export { default as Vscode } from "@/assets/icons/logo_vscode.svg";
+export { default as X } from "@/assets/icons/logo_x.svg";
