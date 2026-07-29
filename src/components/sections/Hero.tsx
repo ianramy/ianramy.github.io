@@ -85,7 +85,7 @@ export default function Hero() {
 						transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
 						className="hidden md:block w-1.5 h-1.5 bg-(--color-accent) rounded-full"
 					/>
-					<p>Data Science</p>
+					<p>Data Scientist</p>
 
 					<motion.span
 						initial={{ scale: 0.8, opacity: 0.5 }}
