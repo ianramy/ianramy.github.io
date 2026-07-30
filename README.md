@@ -13,7 +13,7 @@ This repository contains the source code for my personal portfolio, built with N
 *   **PWA Engine:** Serwist (Offline caching, manifest generation, installability)
 *   **Typography:** Clash Display (Grotesk) & Geist Mono / JetBrains Mono
 
-## ⚡️ Performance & Anti-Slop Constraints
+## Performance & Anti-Slop Constraints
 
 This project adheres strictly to rigorous engineering and design constraints:
 *   **Zero Layout Thrashing:** All animations target `transform` and `opacity` exclusively.
