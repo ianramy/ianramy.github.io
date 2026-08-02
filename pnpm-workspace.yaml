@@ -3,6 +3,7 @@ packages:
   - 'packages/*'
 
 allowBuilds:
+  '@swc/core': true
   sharp: true
 
 minimumReleaseAgeExclude:
