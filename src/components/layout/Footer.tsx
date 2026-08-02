@@ -1,3 +1,5 @@
+// src/components/layout/Footer.tsx
+
 "use client";
 
 import Image from "next/image";
@@ -6,7 +8,7 @@ import { socialLinks } from "@/data/links";
 
 export default function Footer() {
 	return (
-		<footer className="bg-white dark:bg-black text-black dark:text-white py-24 px-6 md:px-12 border-t border-black/10 dark:border-white/10 relative z-10">
+		<footer className="py-24 px-6 md:px-12 border-t border-black/10 dark:border-white/10 relative z-10">
 			<div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 md:gap-8">
 				{/* Brand Area */}
 				<div className="md:col-span-2 flex flex-col justify-between">
@@ -30,8 +32,8 @@ export default function Footer() {
 						<h3 className="text-4xl md:text-6xl font-heading uppercase tracking-tight">
 							Ian Ramy
 						</h3>
-						<p className="font-mono text-xs uppercase tracking-widest mt-4 text-black/60 dark:text-white/60 max-w-xs">
-							Systems Architecture • High-Performance Interfaces
+						<p className="font-mono text-xs uppercase tracking-widest mt-4 max-w-xs">
+							Software Engineer • Data Scientist  • Cybersec Analysist
 						</p>
 					</div>
 				</div>
@@ -39,7 +41,7 @@ export default function Footer() {
 				{/* Links Grid */}
 				<div className="flex flex-col gap-12">
 					<div>
-						<span className="font-mono text-xs text-black/40 dark:text-white/40 uppercase tracking-widest block mb-4">
+						<span className="font-mono text-xs uppercase tracking-widest block mb-4">
 							Affiliations
 						</span>
 						<a
@@ -50,7 +52,7 @@ export default function Footer() {
 						</a>
 					</div>
 					<div>
-						<span className="font-mono text-xs text-black/40 dark:text-white/40 uppercase tracking-widest block mb-4">
+						<span className="font-mono text-xs uppercase tracking-widest block mb-4">
 							Resources
 						</span>
 						<ul className="space-y-4 font-mono text-sm uppercase tracking-wider">
@@ -84,7 +86,7 @@ export default function Footer() {
 
 				{/* Socials Grid */}
 				<div className="flex flex-col gap-4">
-					<span className="font-mono text-xs text-black/40 dark:text-white/40 uppercase tracking-widest block mb-2">
+					<span className="font-mono text-xs uppercase tracking-widest block mb-2">
 						Network
 					</span>
 					{socialLinks.map((social) => (
@@ -97,7 +99,7 @@ export default function Footer() {
 							className="group flex items-center gap-4 font-mono text-sm uppercase tracking-wider hover:opacity-50 transition-opacity border-b border-black/10 dark:border-white/10 pb-4"
 						>
 							<div
-								className="w-4 h-4 bg-black dark:bg-white"
+								className="w-4 h-4 bg-current"
 								style={{
 									maskImage: `url(${social.icon.src})`,
 									WebkitMaskImage: `url(${social.icon.src})`,
@@ -113,9 +115,9 @@ export default function Footer() {
 			</div>
 
 			{/* Footer Bottom */}
-			<div className="max-w-7xl mx-auto mt-24 pt-8 border-t border-black/10 dark:border-white/10 flex flex-col md:flex-row justify-between items-center font-mono text-xs text-black/40 dark:text-white/40 uppercase tracking-widest">
-				<p>© {new Date().getFullYear()} IAN RAMY. ALL RIGHTS RESERVED.</p>
-				<p className="mt-4 md:mt-0">NAIROBI, KE</p>
+			<div className="max-w-7xl mx-auto mt-24 pt-8 border-t border-black/10 dark:border-white/10 flex flex-col md:flex-row justify-between items-center font-mono text-xs uppercase tracking-widest">
+				<p>© {new Date().getFullYear()} IAN RAMY.</p>
+				<p className="mt-4 md:mt-0"> ALL RIGHTS RESERVED.</p>
 			</div>
 		</footer>
 	);

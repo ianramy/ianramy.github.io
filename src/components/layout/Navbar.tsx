@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-import { navLinks, socialLinks } from "@/data/links"; // Adjust to "@/data" if needed
+import { navLinks, socialLinks } from "@/data/links";
 import { useTheme } from "@/hooks/useTheme";
 
 export default function Navbar() {
@@ -40,7 +40,7 @@ export default function Navbar() {
 			initial={{ y: -100 }}
 			animate={{ y: 0 }}
 			transition={{ ease: [0.16, 1, 0.3, 1], duration: 1 }}
-			className="sticky top-0 z-40 w-full bg-white dark:bg-black text-black dark:text-white border-b border-black/10 dark:border-white/10 transition-colors duration-500"
+			className="sticky top-0 z-40 w-full transition-colors duration-500"
 		>
 			<div className="max-w-7xl mx-auto px-6 md:px-12">
 				<div className="flex justify-between items-center h-24">
@@ -122,29 +122,28 @@ export default function Navbar() {
 						</button>
 
 						<div className="flex space-x-6">
-							{socialLinks.map((social) => (
-								<a
-									key={social.label}
-									href={social.href}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="w-5 h-5 flex items-center justify-center transition-opacity hover:opacity-50"
-								>
-									{/* Screen Reader Only text perfectly satisfies Biome and WCAG */}
-									<span className="sr-only">Follow on {social.label}</span>
-									<div
-										className="w-full h-full bg-black dark:bg-white"
-										style={{
-											maskImage: `url(${social.icon.src})`,
-											WebkitMaskImage: `url(${social.icon.src})`,
-											maskSize: "contain",
-											maskRepeat: "no-repeat",
-											WebkitMaskRepeat: "no-repeat",
-										}}
-									/>
-								</a>
-							))}
-						</div>
+								{socialLinks.map((social) => (
+									<a
+										key={social.label}
+										href={social.href}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="w-5 h-5 flex items-center justify-center transition-opacity hover:opacity-50"
+									>
+										<span className="sr-only">Follow on {social.label}</span>
+										<div
+											className="w-full h-full bg-current"
+											style={{
+												maskImage: `url(${social.icon.src})`,
+												WebkitMaskImage: `url(${social.icon.src})`,
+												maskSize: "contain",
+												maskRepeat: "no-repeat",
+												WebkitMaskRepeat: "no-repeat",
+											}}
+										/>
+									</a>
+								))}
+							</div>
 					</div>
 
 					{/* Mobile Toggle */}
@@ -166,7 +165,7 @@ export default function Navbar() {
 						initial={{ height: 0 }}
 						animate={{ height: "100vh" }}
 						exit={{ height: 0 }}
-						className="fixed top-24 left-0 w-full bg-white dark:bg-black overflow-hidden z-30 border-b border-black/10 dark:border-white/10"
+						className="fixed top-24 left-0 w-full overflow-hidden z-30 border-b border-black/10 dark:border-white/10"
 					>
 						<div className="flex flex-col items-center justify-center h-full space-y-8 pb-24 font-mono text-xl uppercase tracking-widest">
 							{navLinks.map((link) => (

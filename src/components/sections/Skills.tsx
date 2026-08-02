@@ -1,3 +1,5 @@
+// src/components/sections/Skills.tsx
+
 "use client";
 
 import { useState } from "react";

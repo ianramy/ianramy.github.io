@@ -1,3 +1,5 @@
+// src/components/sections/About.tsx
+
 "use client";
 
 import Image from "next/image";

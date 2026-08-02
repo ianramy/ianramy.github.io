@@ -1,6 +1,7 @@
 // src/hooks/useScrollToTop.ts
 
 "use client";
+
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
