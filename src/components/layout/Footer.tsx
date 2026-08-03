@@ -8,7 +8,7 @@ import { socialLinks } from "@/data/links";
 
 export default function Footer() {
 	return (
-		<footer className="py-24 px-6 md:px-12 border-t border-black/10 dark:border-white/10 relative z-10">
+		<footer className="py-24 px-6 md:px-12 relative z-10">
 			<div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 md:gap-8">
 				{/* Brand Area */}
 				<div className="md:col-span-2 flex flex-col justify-between">
@@ -33,7 +33,7 @@ export default function Footer() {
 							Ian Ramy
 						</h3>
 						<p className="font-mono text-xs uppercase tracking-widest mt-4 max-w-xs">
-							Software Engineer • Data Scientist  • Cybersec Analysist
+							Software Engineer • Data Scientist • Cybersec Analysist
 						</p>
 					</div>
 				</div>
@@ -96,7 +96,7 @@ export default function Footer() {
 							target="_blank"
 							rel="noopener noreferrer"
 							aria-label={`Follow Ian on ${social.label}`}
-							className="group flex items-center gap-4 font-mono text-sm uppercase tracking-wider hover:opacity-50 transition-opacity border-b border-black/10 dark:border-white/10 pb-4"
+							className="group flex items-center gap-4 font-mono text-sm uppercase tracking-wider hover:opacity-50 transition-opacity pb-4"
 						>
 							<div
 								className="w-4 h-4 bg-current"
@@ -115,7 +115,7 @@ export default function Footer() {
 			</div>
 
 			{/* Footer Bottom */}
-			<div className="max-w-7xl mx-auto mt-24 pt-8 border-t border-black/10 dark:border-white/10 flex flex-col md:flex-row justify-between items-center font-mono text-xs uppercase tracking-widest">
+			<div className="max-w-7xl mx-auto mt-24 pt-8 border-t border-(--color-border-grid) flex flex-col md:flex-row justify-between items-center font-mono text-xs uppercase tracking-widest">
 				<p>© {new Date().getFullYear()} IAN RAMY.</p>
 				<p className="mt-4 md:mt-0"> ALL RIGHTS RESERVED.</p>
 			</div>

@@ -76,7 +76,7 @@ export default function Navbar() {
 								type="button"
 								key={link.href}
 								onClick={() => handleNavClick(link.href.replace("#", ""))}
-								className="relative group hover:text-black/60 dark:hover:text-white/60 transition-colors"
+								className="relative group hover:opacity-60 transition-opacity"
 							>
 								{link.label}
 							</button>
@@ -122,28 +122,28 @@ export default function Navbar() {
 						</button>
 
 						<div className="flex space-x-6">
-								{socialLinks.map((social) => (
-									<a
-										key={social.label}
-										href={social.href}
-										target="_blank"
-										rel="noopener noreferrer"
-										className="w-5 h-5 flex items-center justify-center transition-opacity hover:opacity-50"
-									>
-										<span className="sr-only">Follow on {social.label}</span>
-										<div
-											className="w-full h-full bg-current"
-											style={{
-												maskImage: `url(${social.icon.src})`,
-												WebkitMaskImage: `url(${social.icon.src})`,
-												maskSize: "contain",
-												maskRepeat: "no-repeat",
-												WebkitMaskRepeat: "no-repeat",
-											}}
-										/>
-									</a>
-								))}
-							</div>
+							{socialLinks.map((social) => (
+								<a
+									key={social.label}
+									href={social.href}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="w-5 h-5 flex items-center justify-center transition-opacity hover:opacity-50"
+								>
+									<span className="sr-only">Follow on {social.label}</span>
+									<div
+										className="w-full h-full bg-current"
+										style={{
+											maskImage: `url(${social.icon.src})`,
+											WebkitMaskImage: `url(${social.icon.src})`,
+											maskSize: "contain",
+											maskRepeat: "no-repeat",
+											WebkitMaskRepeat: "no-repeat",
+										}}
+									/>
+								</a>
+							))}
+						</div>
 					</div>
 
 					{/* Mobile Toggle */}

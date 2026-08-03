@@ -11,7 +11,7 @@ export default function About() {
 			{aboutFacets.map((facet, idx) => (
 				<section
 					key={facet.title}
-					className="sticky top-0 h-screen w-full flex items-center justify-center p-6 md:p-12 overflow-hidden border-b border-(--color-border-grid)"
+					className="sticky top-0 h-screen w-full flex items-center justify-center p-6 md:p-12 overflow-hidden"
 					style={{
 						backgroundColor: "var(--color-bg-base)",
 						zIndex: 10 + idx,
@@ -36,7 +36,7 @@ export default function About() {
 								alt={facet.title}
 								fill
 								sizes="(max-width: 768px) 100vw, 50vw"
-								className="object-cover object-center saturate-50 contrast-[0.85] opacity-80 hover:saturate-110 hover:contrast-100 hover:opacity-100 transition-all duration-700 ease-signature"
+								className="object-cover object-center saturate-150 contrast-110 opacity-150 hover:saturate-150 hover:contrast-100 hover:opacity-150 transition-all duration-700 ease-signature"
 							/>
 						</div>
 					</div>

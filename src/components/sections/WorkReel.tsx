@@ -9,7 +9,7 @@ export default function WorkReel() {
 	return (
 		<section
 			id="projects"
-			className="relative bg-(--color-bg-base) py-24 px-6 md:px-12 border-t border-(--color-border-grid)"
+			className="relative bg-(--color-bg-base) py-24 px-6 md:px-12"
 		>
 			<div className="max-w-7xl mx-auto mb-16">
 				<span className="font-mono text-xs text-(--color-accent) uppercase tracking-widest block mb-2">
@@ -25,7 +25,7 @@ export default function WorkReel() {
 				{projects.map((project, idx) => (
 					<div
 						key={project.id}
-						className="sticky top-[12vh] w-full min-h-[70vh] rounded-none border border-(--color-border-grid) bg-(--color-bg-base) p-8 md:p-12 flex flex-col justify-between overflow-hidden transition-all duration-500"
+						className="sticky top-[12vh] w-full min-h-[70vh] rounded-none bg-(--color-bg-base) p-8 md:p-12 flex flex-col justify-between overflow-hidden transition-all duration-500"
 						style={{ zIndex: 10 + idx }}
 					>
 						<div className="flex flex-col md:flex-row justify-between md:items-start gap-4 mb-8">
@@ -46,19 +46,19 @@ export default function WorkReel() {
 								href={project.link}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="font-mono text-xs text-(--color-text-secondary) uppercase tracking-widest"
+								className="font-mono text-sm text-(--color-text-secondary) uppercase tracking-widest"
 							>
 								View Project
 							</a>
 						)}
 
-						<div className="relative w-full h-[40vh] md:h-[50vh] overflow-hidden bg-(--color-border-grid)">
+						<div className="relative w-full h-[80vh] md:h-[50vh] overflow-hidden bg-(--color-border-grid)">
 							<Image
 								src={project.img}
 								alt={project.title}
 								fill
 								sizes="(max-width: 768px) 100vw, 50vw"
-								className="object-cover object-center saturate-50 contrast-[0.85] opacity-80 hover:saturate-110 hover:contrast-100 hover:opacity-100 transition-all duration-700 ease-signature"
+								className="object-cover object-center saturate-150 contrast-110 opacity-150 hover:saturate-150 hover:contrast-100 hover:opacity-150 transition-all duration-700 ease-signature"
 							/>
 						</div>
 					</div>

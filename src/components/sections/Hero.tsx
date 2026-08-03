@@ -45,7 +45,7 @@ export default function Hero() {
 	return (
 		<section
 			id="home"
-			className="h-screen w-full flex flex-col items-center justify-center bg-(--color-bg-base) border-b border-(--color-border-grid) sticky top-0 z-0"
+			className="h-screen w-full flex flex-col items-center justify-center bg-(--color-bg-base) sticky top-0 z-0"
 		>
 			<motion.div
 				variants={containerVariants}
