@@ -1,6 +1,9 @@
+// src/components/layout/Navbar.tsx
+
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
@@ -26,13 +29,15 @@ export default function Navbar() {
 	};
 
 	const handleNavClick = (sectionId: string) => {
-		if (pathname === "/") {
-			scrollToSection(sectionId);
-		} else {
-			sessionStorage.setItem("scrollToSection", sectionId);
-			router.push("/");
-		}
 		setMenuOpen(false);
+		setTimeout(() => {
+			if (pathname === "/") {
+				scrollToSection(sectionId);
+			} else {
+				sessionStorage.setItem("scrollToSection", sectionId);
+				router.push("/");
+			}
+		}, 200);
 	};
 
 	return (
@@ -42,7 +47,7 @@ export default function Navbar() {
 			transition={{ ease: [0.16, 1, 0.3, 1], duration: 1 }}
 			className="sticky top-0 z-40 w-full transition-colors duration-500"
 		>
-			<div className="max-w-7xl mx-auto px-6 md:px-12">
+			<div className="max-w-7xl mx-auto px-4 md:px-8 backdrop-blur-3xl">
 				<div className="flex justify-between items-center h-24">
 					{/* Logo */}
 					<button
@@ -150,10 +155,10 @@ export default function Navbar() {
 					<button
 						type="button"
 						aria-label="Toggle Mobile Menu"
-						className="md:hidden text-2xl font-mono uppercase"
+						className="md:hidden flex items-center justify-center"
 						onClick={() => setMenuOpen(!menuOpen)}
 					>
-						{menuOpen ? "CLOSE" : "MENU"}
+						{menuOpen ? <X size={28} /> : <Menu size={28} />}
 					</button>
 				</div>
 			</div>
@@ -162,12 +167,12 @@ export default function Navbar() {
 			<AnimatePresence>
 				{menuOpen && (
 					<motion.div
-						initial={{ height: 0 }}
-						animate={{ height: "100vh" }}
-						exit={{ height: 0 }}
-						className="fixed top-24 left-0 w-full overflow-hidden z-30 border-b border-black/10 dark:border-white/10"
+						initial={{ height: 0, opacity: 0 }}
+						animate={{ height: "auto", opacity: 1 }}
+						exit={{ height: 0, opacity: 0 }}
+						className="absolute top-24 left-0 w-full overflow-hidden z-30 backdrop-blur-2xl"
 					>
-						<div className="flex flex-col items-center justify-center h-full space-y-8 pb-24 font-mono text-xl uppercase tracking-widest">
+						<div className="flex flex-col items-center justify-center py-8 space-y-8 font-mono text-xl uppercase tracking-widest">
 							{navLinks.map((link) => (
 								<button
 									type="button"
@@ -180,8 +185,11 @@ export default function Navbar() {
 							))}
 							<button
 								type="button"
-								onClick={toggleTheme}
-								className="mt-8 text-sm text-gray-500 hover:text-black dark:hover:text-white transition-colors"
+								onClick={() => {
+									toggleTheme();
+									setMenuOpen(false);
+								}}
+								className="mt-8 text-sm transition-colors"
 							>
 								TOGGLE {theme === "dark" ? "LIGHT" : "DARK"} MODE
 							</button>

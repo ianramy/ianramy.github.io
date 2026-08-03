@@ -8,10 +8,18 @@ import WorkReel from "@/components/sections/WorkReel";
 export default function PortfolioHome() {
 	return (
 		<main className="min-h-screen selection:bg-(--color-accent) selection:text-black">
-			<Hero />
-			<About />
-			<Skills />
-			<WorkReel />
+			<section id="home">
+				<Hero />
+			</section>
+			<section id="about">
+				<About />
+			</section>
+			<section id="skills">
+				<Skills />
+			</section>
+			<section id="projects">
+				<WorkReel />
+			</section>
 		</main>
 	);
 }

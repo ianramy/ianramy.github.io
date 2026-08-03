@@ -52,7 +52,7 @@ export default function WorkReel() {
 							</a>
 						)}
 
-						<div className="relative w-full h-[80vh] md:h-[50vh] overflow-hidden bg-(--color-border-grid)">
+						<div className="relative w-full aspect-4/3 md:h-[50vh] order-1 md:order-2 overflow-hidden bg-(--color-border-grid)">
 							<Image
 								src={project.img}
 								alt={project.title}
