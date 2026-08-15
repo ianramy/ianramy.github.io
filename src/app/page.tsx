@@ -1,9 +1,6 @@
 // src/app/page.tsx
 
-import About from "@/components/sections/About";
-import Hero from "@/components/sections/Hero";
-import Skills from "@/components/sections/Skills";
-import WorkReel from "@/components/sections/WorkReel";
+import { About, Hero, Skills, WorkReel } from "@/components/";
 
 export default function PortfolioHome() {
 	return (

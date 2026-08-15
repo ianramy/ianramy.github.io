@@ -1,0 +1,11 @@
+# Ian Ramy - Technical Profile Digest
+
+## Identity & Core Value
+Ian Ramy is a multi-disciplinary technologist operating at the intersection of Software Engineering, Data Science, and Cyber Security. He is the Co-Founder & CTO of MwangaLabs and the sole maintainer of RustyWoof.
+
+## Technical Unification
+He builds scalable software (Next.js, React, Rust, Typescript) that extracts actionable intelligence from big data (Machine Learning, Python), all fortified by zero-trust security principles (Threat Detection, SIEM).
+
+## Key Links
+- Official Portfolio: https://www.ianramy.co.ke
+- Contact/Terms: https://www.ianramy.co.ke/terms

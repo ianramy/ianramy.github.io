@@ -6,14 +6,10 @@ export { default as Cpp } from "@/assets/icons/logo_c++.svg";
 export { default as CSharp } from "@/assets/icons/logo_csharp.svg";
 export { default as CSS } from "@/assets/icons/logo_css3.svg";
 export { default as Discord } from "@/assets/icons/logo_discord.svg";
-export { default as Facebook } from "@/assets/icons/logo_facebook.svg";
 export { default as Figma } from "@/assets/icons/logo_figma.svg";
 export { default as Flask } from "@/assets/icons/logo_flask.svg";
 export { default as Git } from "@/assets/icons/logo_git.svg";
-export {
-	default as Github,
-	default as GitHub,
-} from "@/assets/icons/logo_github.svg";
+export { default as Github } from "@/assets/icons/logo_github.svg";
 export { default as HTML } from "@/assets/icons/logo_html5.svg";
 export { default as Instagram } from "@/assets/icons/logo_instagram.svg";
 export { default as Javascript } from "@/assets/icons/logo_javascript.svg";
@@ -31,4 +27,3 @@ export { default as Sqlite } from "@/assets/icons/logo_sqlite.svg";
 export { default as TypeScript } from "@/assets/icons/logo_typescript.svg";
 export { default as Vite } from "@/assets/icons/logo_vite.svg";
 export { default as Vscode } from "@/assets/icons/logo_vscode.svg";
-export { default as X } from "@/assets/icons/logo_x.svg";

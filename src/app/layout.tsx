@@ -1,13 +1,17 @@
 // src/app/layout.tsx
 
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
-import { Footer, Navbar } from "@/components/layout";
+import {
+	Footer,
+	InstallPrompt,
+	JsonLd,
+	Navbar,
+	ServiceWorkerRegistry,
+} from "@/components";
 import SmoothScrolling from "@/components/motion/SmoothScrolling";
 import { ThemeProvider } from "@/hooks";
+import { allFontVariables } from "@/utils";
 import "@/styles/global.css";
-
-const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const viewport: Viewport = {
 	themeColor: [
@@ -22,11 +26,33 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
 	metadataBase: new URL("https://www.ianramy.co.ke"),
 	title: {
-		template: "%s | Developer Portfolio",
-		default: "Ian Ramy",
+		template: "%s | Ian Ramy",
+		default:
+			"Ian Ramy | Full-Stack Engineer, Data Scientist & CyberSecurity Analyst",
 	},
 	description:
-		"Experienced Senior Frontend Engineer specializing in Next.js, React, and high-performance web applications.",
+		"I am a Full-Stack Secure Data Engineer bridging the critical gaps between scalable software architecture, machine learning, and zero-trust security. I build resilient, high-performance web systems using Next.js and React for the frontend & Python and Rust for the backend, engineered specifically to extract actionable intelligence from big data while remaining fortified against emerging cyber threats. Whether leading development at MwangaLabs or maintaining open-source infrastructure like Rustywoof, I design architectures that protect data integrity without compromising user experience or computational speed.",
+	keywords: [
+		"Next.js 16",
+		"React",
+		"TypeScript",
+		"Software Engineering",
+		"Software Development",
+		"Full-Stack Development",
+		"Full-Stack Secure Data Engineer",
+		"Full-Stack Software Engineer",
+		"Python",
+		"Rust",
+		"RustyWoof",
+		"Machine Learning",
+		"Data Science",
+		"Cyber Security Analysis",
+		"DevSecOps",
+		"Threat Detection",
+	],
+	alternates: {
+		canonical: "/",
+	},
 	robots: {
 		index: true,
 		follow: true,
@@ -39,19 +65,19 @@ export const metadata: Metadata = {
 		},
 	},
 	openGraph: {
-		title: "Software Engineer Portfolio",
+		title: "Ian Ramy | Full-Stack Secure Data Engineer",
 		description:
-			"Explore my projects, skills, and professional experience in modern web development.",
+			"Explore my technical architectures at the intersection of Software Engineering, Data Science, and Cyber Security.",
 		url: "https://www.ianramy.co.ke",
-		siteName: "Developer Portfolio",
-		locale: "en_GB",
+		siteName: "Ian Ramy Portfolio",
+		locale: "en_KE",
 		type: "website",
 		images: [
 			{
 				url: "/images/logo-black.jpg",
 				width: 1200,
 				height: 630,
-				alt: "Developer Portfolio Preview Image",
+				alt: "Ian Ramy | Full-Stack Engineer, Data Scientist & CyberSecurity Analyst",
 			},
 		],
 	},
@@ -65,8 +91,10 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body
-				className={`${inter.className} bg-white text-slate-900 dark:bg-slate-900 dark:text-white antialiased`}
+				className={`${allFontVariables} bg-white text-slate-900 dark:bg-slate-900 dark:text-white antialiased`}
 			>
+				<JsonLd />
+				<ServiceWorkerRegistry />
 				<ThemeProvider>
 					<SmoothScrolling>
 						<Navbar />
@@ -74,6 +102,7 @@ export default function RootLayout({
 						<Footer />
 					</SmoothScrolling>
 				</ThemeProvider>
+				<InstallPrompt />
 			</body>
 		</html>
 	);

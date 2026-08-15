@@ -1,11 +1,5 @@
 // src/utils/calcExperience.ts
 
-export interface ExperienceResult {
-	years: number;
-	months: number;
-	formatted: string;
-}
-
 export function calculateExperience(startDate: string | Date): string {
 	const start = new Date(startDate);
 	const now = new Date();

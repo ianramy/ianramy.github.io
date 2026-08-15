@@ -1,3 +1,5 @@
 // src/hooks/index.ts
 
-export { ThemeProvider, useTheme } from "./useTheme";
+import { ThemeProvider, useTheme } from "./useTheme";
+
+export { ThemeProvider, useTheme };

@@ -7,8 +7,8 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-import { navLinks, socialLinks } from "@/data/links";
-import { useTheme } from "@/hooks/useTheme";
+import { navLinks, socialLinks } from "@/data";
+import { useTheme } from "@/hooks";
 
 export default function Navbar() {
 	const [menuOpen, setMenuOpen] = useState(false);
