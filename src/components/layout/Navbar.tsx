@@ -45,9 +45,9 @@ export default function Navbar() {
 			initial={{ y: -100 }}
 			animate={{ y: 0 }}
 			transition={{ ease: [0.16, 1, 0.3, 1], duration: 1 }}
-			className="sticky top-0 z-40 w-full transition-colors duration-500"
+			className="sticky bg-(--color-bg-base) top-0 z-40 w-full transition-colors duration-500"
 		>
-			<div className="max-w-7xl mx-auto px-4 md:px-8 backdrop-blur-3xl">
+			<div className="w-full mx-auto px-4 md:px-8 backdrop-blur-3xl">
 				<div className="flex justify-between items-center h-24">
 					{/* Logo */}
 					<button

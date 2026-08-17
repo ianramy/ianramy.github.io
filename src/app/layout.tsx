@@ -24,7 +24,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://www.ianramy.co.ke"),
+	metadataBase: new URL("https://ianramy.co.ke"),
 	title: {
 		template: "%s | Ian Ramy",
 		default:

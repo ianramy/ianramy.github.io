@@ -3,7 +3,7 @@
 import { Footer, Navbar } from "./layout";
 import { About, Hero, Skills, WorkReel } from "./sections";
 import { JsonLd, ServiceWorkerRegistry } from "./seo";
-import { InstallPrompt } from "./ui";
+import { InstallPrompt, SkillIcon } from "./ui";
 
 export {
 	About,
@@ -13,6 +13,7 @@ export {
 	JsonLd,
 	Navbar,
 	ServiceWorkerRegistry,
+	SkillIcon,
 	Skills,
 	WorkReel,
 };

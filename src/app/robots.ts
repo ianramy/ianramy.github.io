@@ -23,6 +23,6 @@ export default function robots(): MetadataRoute.Robots {
 				allow: "/",
 			},
 		],
-		sitemap: "https://www.ianramy.co.ke/sitemap.xml",
+		sitemap: "https://ianramy.co.ke/sitemap.xml",
 	};
 }

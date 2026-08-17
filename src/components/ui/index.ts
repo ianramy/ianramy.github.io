@@ -1,5 +1,6 @@
 // src/components/ui/index.ts
 
-import { default as InstallPrompt } from "./InstallPrompt";
+import InstallPrompt from "./InstallPrompt";
+import SkillIcon from "./SkillIcon";
 
-export { InstallPrompt };
+export { InstallPrompt, SkillIcon };

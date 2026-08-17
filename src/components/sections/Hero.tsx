@@ -179,7 +179,10 @@ function SlotChar({ char, index }: { char: string; index: number }) {
 				className="flex flex-col items-center"
 			>
 				{column.map((item) => (
-					<span key={item.id} className="flex items-center justify-center h-[1.5em]">
+					<span
+						key={item.id}
+						className="flex items-center justify-center h-[1.5em]"
+					>
 						{item.char}
 					</span>
 				))}
@@ -296,7 +299,7 @@ export default function Hero() {
 				variants={containerVariants}
 				initial="hidden"
 				animate="visible"
-				className="text-center w-full max-w-5xl px-4 md:px-6 pb-[10vh]"
+				className="text-center w-full px-4 md:px-6 pb-[10vh]"
 			>
 				<h1 className="text-[10vw] md:text-[8vw] leading-none font-heading uppercase tracking-heading mb-6 perspective-[1000px] whitespace-nowrap">
 					<div className="overflow-hidden h-[1.3em] flex items-end justify-center pb-2">
