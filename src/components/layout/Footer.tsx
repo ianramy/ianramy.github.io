@@ -33,7 +33,7 @@ export default function Footer() {
 							Ian Ramy
 						</h3>
 						<p className="font-mono text-xs uppercase tracking-widest mt-4 max-w-xs">
-							Software Engineer • Data Scientist • Cybersec Analysist
+							Software Engineer • Data Scientist • Cybersec Analyst
 						</p>
 					</div>
 				</div>

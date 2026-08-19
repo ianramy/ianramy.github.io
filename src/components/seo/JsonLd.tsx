@@ -4,7 +4,7 @@ export default function JsonLd() {
 	const structuredData = {
 		"@context": "https://schema.org",
 		"@type": "ProfilePage",
-		"mainEntity": {
+		mainEntity: {
 			"@type": "Person",
 			name: "Ian Ramy",
 			jobTitle: [
@@ -24,8 +24,11 @@ export default function JsonLd() {
 			},
 			description:
 				"Full-Stack Secure Data Engineer specializing in Next.js, Rust-based, Machine Learning, and Zero-Trust Security architectures.",
-			sameAs: ["https://github.com/ianramy", "https://linkedin.com/in/ian-ramy"],
-		}
+			sameAs: [
+				"https://github.com/ianramy",
+				"https://linkedin.com/in/ian-ramy",
+			],
+		},
 	};
 
 	return (

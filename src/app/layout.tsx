@@ -1,13 +1,7 @@
 // src/app/layout.tsx
 
 import type { Metadata, Viewport } from "next";
-import {
-	Footer,
-	InstallPrompt,
-	JsonLd,
-	Navbar,
-	ServiceWorkerRegistry,
-} from "@/components";
+import { Footer, InstallPrompt, JsonLd, Navbar } from "@/components";
 import SmoothScrolling from "@/components/motion/SmoothScrolling";
 import { ThemeProvider } from "@/hooks";
 import { allFontVariables } from "@/utils";
@@ -94,7 +88,6 @@ export default function RootLayout({
 				className={`${allFontVariables} bg-white text-slate-900 dark:bg-slate-900 dark:text-white antialiased`}
 			>
 				<JsonLd />
-				<ServiceWorkerRegistry />
 				<ThemeProvider>
 					<SmoothScrolling>
 						<Navbar />

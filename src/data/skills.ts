@@ -125,14 +125,14 @@ export const skillGroups = [
 			{
 				title: "Django",
 				icon: Django,
-				invertOnDark: true,
+				invertOnDark: false,
 				description: `Django is my standard stack for internal APIs for Python-based web applications.`,
 				years: calculateExperience("2024-09-20"),
 			},
 			{
 				title: "FastAPI",
 				icon: Fastapi,
-				invertOnDark: true,
+				invertOnDark: false,
 				description: `FastAPI is my standard stack for internal APIs for Python-based web applications.`,
 				years: calculateExperience("2025-10-05"),
 			},

@@ -2,7 +2,7 @@
 
 import { Footer, Navbar } from "./layout";
 import { About, Hero, Skills, WorkReel } from "./sections";
-import { JsonLd, ServiceWorkerRegistry } from "./seo";
+import { JsonLd } from "./seo";
 import { InstallPrompt, SkillIcon } from "./ui";
 
 export {
@@ -12,7 +12,6 @@ export {
 	InstallPrompt,
 	JsonLd,
 	Navbar,
-	ServiceWorkerRegistry,
 	SkillIcon,
 	Skills,
 	WorkReel,

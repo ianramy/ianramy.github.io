@@ -1,9 +1,5 @@
 // src/assets/index.ts
 
-export { default as Bootstrap } from "@/assets/icons/logo_bootstrap.svg";
-export { default as C } from "@/assets/icons/logo_c.svg";
-export { default as Cpp } from "@/assets/icons/logo_c++.svg";
-export { default as CSharp } from "@/assets/icons/logo_csharp.svg";
 export { default as CSS } from "@/assets/icons/logo_css3.svg";
 export { default as Discord } from "@/assets/icons/logo_discord.svg";
 export { default as Django } from "@/assets/icons/logo_django.svg";
@@ -13,7 +9,6 @@ export { default as Git } from "@/assets/icons/logo_git.svg";
 export { default as Github } from "@/assets/icons/logo_github.svg";
 export { default as HTML } from "@/assets/icons/logo_html5.svg";
 export { default as Instagram } from "@/assets/icons/logo_instagram.svg";
-export { default as Javascript } from "@/assets/icons/logo_javascript.svg";
 export { default as LinkedIn } from "@/assets/icons/logo_linkedin.svg";
 export { default as MySQL } from "@/assets/icons/logo_mysql.svg";
 export { default as NextJs } from "@/assets/icons/logo_nextjs.svg";

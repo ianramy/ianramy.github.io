@@ -50,7 +50,7 @@ function ScrambleLetter({
 					clearInterval(flickerId);
 					setSettled(true);
 				},
-				1500 + Math.random() * 1000,
+				1000 + Math.random() * 1000,
 			);
 		};
 
@@ -59,7 +59,7 @@ function ScrambleLetter({
 				runScramble();
 				loopId = setInterval(() => {
 					runScramble();
-				}, 8000);
+				}, 4000);
 			},
 			startDelay + index * 100,
 		);
@@ -287,8 +287,8 @@ export default function Hero() {
 		},
 	};
 
-	const LINE_1_SCRAMBLE_DELAY = 1400;
-	const LINE_2_SCRAMBLE_DELAY = 1550;
+	const LINE_1_SCRAMBLE_DELAY = 400;
+	const LINE_2_SCRAMBLE_DELAY = 550;
 
 	return (
 		<section
