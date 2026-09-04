@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
+import logoBlack from "@/assets/images/logo-black.jpg";
 import { navLinks, socialLinks } from "@/data";
 import { useTheme } from "@/hooks";
 
@@ -57,16 +58,16 @@ export default function Navbar() {
 						aria-label="Scroll to Home"
 					>
 						<Image
-							src="/images/logo-black.jpg"
-							alt="Logo"
+							src={logoBlack}
+							alt="Ian Ramy Logo"
 							width={60}
 							height={60}
 							className="dark:hidden"
 							priority
 						/>
 						<Image
-							src="/images/logo-black.jpg"
-							alt="Logo"
+							src={logoBlack}
+							alt="Ian Ramy Logo"
 							width={60}
 							height={60}
 							className="hidden dark:block"
@@ -75,7 +76,10 @@ export default function Navbar() {
 					</button>
 
 					{/* Desktop Nav */}
-					<div className="hidden md:flex flex-1 justify-center items-center space-x-12 font-mono text-sm uppercase tracking-widest">
+					<div
+						className="hidden md:flex flex-1 justify-center items-center space-x-12 font-mono
+						text-sm uppercase tracking-widest text-slate-900 dark:text-white"
+					>
 						{navLinks.map((link) => (
 							<button
 								type="button"

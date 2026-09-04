@@ -196,7 +196,6 @@ const ROLES = [
 	"Data Scientist",
 	"CyberSecurity Analyst",
 	"Sole-Maintainer, RustyWoof",
-	"Co-Founder / CTO, MwangaLabs",
 ];
 
 function RoleCycler() {
@@ -230,11 +229,10 @@ function RoleCycler() {
 				<AnimatePresence mode="wait">
 					<motion.div
 						key={ROLES[index]}
-						initial={{ opacity: 0, filter: "blur(6px)" }}
-						animate={{ opacity: 1, filter: "blur(0px)" }}
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
 						exit={{
 							opacity: 0,
-							filter: "blur(6px)",
 							transition: { duration: 0.2 },
 						}}
 						className="flex"
@@ -267,21 +265,19 @@ export default function Hero() {
 
 	// 3D Masked Line Reveal for the massive typography
 	const lineVariants: Variants = {
-		hidden: { y: "100%", rotateX: -20, opacity: 0 },
+		hidden: { y: "100%", rotateX: -20 },
 		visible: {
 			y: "0%",
 			rotateX: 0,
-			opacity: 1,
 			transition: { duration: 1.2, ease: customEase },
 		},
 	};
 
 	// Cinematic blur-to-focus for the technical roles
 	const blurFadeVariants: Variants = {
-		hidden: { opacity: 0, filter: "blur(8px)", y: 10 },
+		hidden: { opacity: 0, y: 10 },
 		visible: {
 			opacity: 1,
-			filter: "blur(0px)",
 			y: 0,
 			transition: { duration: 1, ease: customEase },
 		},

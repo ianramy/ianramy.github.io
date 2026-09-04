@@ -1,16 +1,64 @@
 # Ian Ramy - Technical Profile Digest
 
-## Identity & Core Value
+_Last updated: 2026-09-04_
 
-Ian Ramy is a multi-disciplinary technologist operating at the intersection of Software Engineering, Data Science, and Cyber Security. He is the Co-Founder & CTO of MwangaLabs and the sole maintainer of RustyWoof.
+> Ian Ramy is a multi-disciplinary technologist operating at the intersection of
+> Software Engineering, Data Science, and Cyber Security. He designs and ships
+> scalable, production-grade software, extracts actionable intelligence from
+> large and messy datasets, and hardens systems with zero-trust security
+> principles. He is the sole maintainer of Rustywoof.
 
-## Technical Unification
+## About
 
-He builds scalable software (Next.js, React, Rust, Typescript) that extracts actionable intelligence from big data (Machine Learning, Python), all fortified by zero-trust security principles (Threat Detection, SIEM).
+Ian Ramy builds full-stack applications and data-driven systems with an
+emphasis on performance, correctness, and security-by-design. His work spans
+three disciplines that most engineers treat separately — application
+development, applied machine learning, and defensive security — which he
+combines into a single engineering practice: software that is fast, insightful,
+and hard to compromise.
+
+## Core Expertise
+
+- **Software Engineering**: TypeScript, Rust — building scalable web
+  applications and systems-level tooling.
+- **Data Science**: Python, Machine Learning — turning raw and unstructured
+  data into actionable, decision-ready intelligence.
+- **Cyber Security**: Threat Detection, SIEM, zero-trust architecture —
+  securing systems at the network, application, and data layer.
+
+## Featured Project: Rustywoof
+
+Rustywoof is Ian Ramy's flagship open-source project, built and maintained
+entirely by him. It is a high-performance, memory-safe command-line secret
+scanner and supply-chain defense tool, written in Rust, that detects exposed
+cryptographic credentials, leaked API keys, and vulnerable or compromised
+dependencies before they reach production.
+
+- Repository: [Rustywoof on GitHub](https://github.com/ianramy/rustywoof)
+- Status: Actively maintained, sole maintainer
+- Package Registries:
+  - [crates.io](https://crates.io/crates/rustywoof) (Rust)
+  - [npm](https://www.npmjs.com/package/@ianramy/rustywoof) (Node.js)
+  - [PyPI](https://pypi.org/project/rustywoof/) (Python)
+
+## Notable Client & Contract Work
+
+- **Resonance Medical Company Limited**: Ian Ramy designed and built the
+  company website for Resonance Medical Co. Limited (RMCL), a medical
+  equipment distribution and precision engineering company operating across
+  East and Central Africa.
+  - Site: [resonancemedical.co.ke](https://resonancemedical.co.ke)
+
+## Philosophy
+
+Ian approaches engineering problems holistically: every system he builds is
+evaluated not just for what it does, but for what data it exposes and what
+attack surface it creates. This "build, analyze, secure" mindset informs his
+approach to both client work and personal projects like Rustywoof.
 
 ## Key Links
 
-[Official Portfolio](https://ianramy.co.ke)
-[Contact/Terms](https://ianramy.co.ke/terms)
-[GitHub](https://github.com/ianramy)
-[LinkedIn](https://www.linkedin.com/in/ianramy)
+- [Official Portfolio](https://ianramy.co.ke)
+- [GitHub](https://github.com/ianramy)
+- [LinkedIn](https://www.linkedin.com/in/ian-ramy)
+- [Discord](https://www.discordapp.com/users/1366810539854008360/)

@@ -9,7 +9,7 @@ export default function manifest(): MetadataRoute.Manifest {
 		name: "Ian Ramy | Portfolio",
 		short_name: "Ian Ramy",
 		description:
-			"I am a Full-Stack Secure Data Engineer bridging the critical gaps between scalable software architecture, machine learning, and zero-trust security. I build resilient, high-performance web systems using Next.js and React for the frontend & Python and Rust for the backend, engineered specifically to extract actionable intelligence from big data while remaining fortified against emerging cyber threats. Whether leading development at MwangaLabs or maintaining open-source infrastructure like Rustywoof, I design architectures that protect data integrity without compromising user experience or computational speed.",
+			"I am a Full-Stack Secure Data Engineer bridging the critical gaps between scalable software architecture, machine learning, and zero-trust security. I build resilient, high-performance web systems using TypeScript for the frontend & Python and Rust for the backend, engineered specifically to extract actionable intelligence from big data while remaining fortified against emerging cyber threats. Whether developing software for clients or maintaining open-source infrastructure like Rustywoof, I design architectures that protect data integrity without compromising user experience or computational speed.",
 		start_url: "/",
 		scope: "/",
 		display: "standalone",

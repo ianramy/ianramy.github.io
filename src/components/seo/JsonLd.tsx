@@ -1,55 +1,84 @@
 // src/components/seo/JsonLd.tsx
 
+function safeJsonLd(data: unknown): string {
+	return JSON.stringify(data).replace(/</g, "\\u003c");
+}
+
 export default function JsonLd() {
 	const structuredData = {
 		"@context": "https://schema.org",
-		"@type": "ProfilePage",
-		mainEntity: {
-			"@type": "Person",
-			name: "Ian Ramy",
-			alternateName: "ianramy",
-			jobTitle: "Full-Stack Software Engineer",
-			knowsAbout: [
-				"Software Engineering",
-				"Data Science",
-				"Cyber Security Analysis",
-				"Machine Learning",
-				"DevSecOps",
-			],
-			url: "https://ianramy.co.ke",
-			worksFor: {
-				"@type": "Organization",
-				name: "MwangaLabs",
-				url: "https://mwangalabs.co.ke",
+		"@graph": [
+			{
+				"@type": "ProfilePage",
+				"@id": "https://ianramy.co.ke/#profilepage",
+				url: "https://ianramy.co.ke",
+				dateModified: "2026-09-04",
+				mainEntity: { "@id": "https://ianramy.co.ke/#person" },
 			},
-			owns: {
-				"@type": "SoftwareApplication",
-				name: "RustyWoof",
-				applicationCategory: "SecurityApplication",
-				url: "https://ianramy.co.ke/rustywoof",
+			{
+				"@type": "Person",
+				"@id": "https://ianramy.co.ke/#person",
+				name: "Ian Ramy",
+				alternateName: ["ianramy", "Ian Mwagore"],
+				disambiguatingDescription:
+					"Ian Ramy (online handle name for Ian Mwagore) is an independent software engineer and open-source maintainer.",
+				jobTitle: "Full-Stack Software Engineer & Maintainer, Rustywoof",
+				description:
+					"Full-Stack Secure Data Engineer specializing in TypeScript, Rust, Machine Learning, and Zero-Trust Security architectures.",
+				knowsAbout: [
+					"Software Engineering",
+					"Data Science",
+					"Cyber Security Analysis",
+					"Machine Learning",
+					"DevSecOps",
+					"Zero-Trust Architecture",
+				],
+				url: "https://ianramy.co.ke",
+				image: "https://ianramy.co.ke/images/logo-black.jpg",
+				alumniOf: {
+					"@type": "CollegeOrUniversity",
+					name: "Moringa School",
+					url: "https://moringaschool.com",
+				},
+				owns: { "@id": "https://ianramy.co.ke/#rustywoof" },
+				sameAs: [
+					"https://github.com/ianramy",
+					"https://www.linkedin.com/in/ian-ramy",
+					"https://www.instagram.com/ian_ramy/",
+				],
 			},
-			alumniOf: {
-				"@type": "CollegeOrUniversity",
-				name: "Moringa School",
-				url: "https://moringaschool.com",
-				
+			{
+				"@type": "SoftwareSourceCode",
+				"@id": "https://ianramy.co.ke/#rustywoof",
+				name: "Rustywoof",
+				author: { "@id": "https://ianramy.co.ke/#person" },
+				description:
+					"A high-performance, memory-safe command-line secret scanner and supply-chain defense tool, written in Rust, that detects exposed cryptographic credentials, leaked API keys, and vulnerable or compromised dependencies.",
+				programmingLanguage: "Rust",
+				codeRepository: "https://github.com/ianramy/rustywoof",
+				sameAs: [
+					"https://crates.io/crates/rustywoof",
+					"https://www.npmjs.com/package/@ianramy/rustywoof",
+					"https://pypi.org/project/rustywoof/",
+				],
 			},
-			description:
-				"Full-Stack Secure Data Engineer specializing in Next.js, Rust-based, Machine Learning, and Zero-Trust Security architectures.",
-			sameAs: [
-				"https://github.com/ianramy",
-				"https://linkedin.com/in/ian-ramy",
-				"https://www.instagram.com/ian_ramy/",
-				"https://www.discordapp.com/users/1366810539854008360/",
-			],
-		},
+			{
+				"@type": "WebSite",
+				"@id": "https://resonancemedical.co.ke/#website",
+				name: "Resonance Medical Company Limited",
+				url: "https://resonancemedical.co.ke",
+				creator: { "@id": "https://ianramy.co.ke/#person" },
+				about: {
+					"@type": "Organization",
+					name: "Resonance Medical Company Limited",
+					description:
+						"A medical equipment distribution and precision engineering company operating across East and Central Africa.",
+				},
+			},
+		],
 	};
 
 	return (
-		<script
-			type="application/ld+json"
-			// biome-ignore lint/security/noDangerouslySetInnerHtml: Required for injecting structured schema data safely
-			dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-		/>
+		<script type="application/ld+json">{safeJsonLd(structuredData)}</script>
 	);
 }

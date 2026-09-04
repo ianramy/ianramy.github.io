@@ -1,6 +1,13 @@
 // src/app/page.tsx
 
-import { About, Hero, Skills, WorkReel } from "@/components/";
+import dynamic from "next/dynamic";
+import { Hero } from "@/components/";
+
+const About = dynamic(() => import("@/components/").then((mod) => mod.About));
+const Skills = dynamic(() => import("@/components/").then((mod) => mod.Skills));
+const WorkReel = dynamic(() =>
+	import("@/components/").then((mod) => mod.WorkReel),
+);
 
 export default function PortfolioHome() {
 	return (

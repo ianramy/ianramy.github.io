@@ -33,24 +33,13 @@ export default function Footer() {
 							Ian Ramy
 						</h3>
 						<p className="font-mono text-xs uppercase tracking-widest mt-4 max-w-xs">
-							Software Engineer • Data Scientist • Cybersec Analyst
+							Software Engineer • Data Scientist • Cybersecurity Analyst
 						</p>
 					</div>
 				</div>
 
 				{/* Links Grid */}
 				<div className="flex flex-col gap-12">
-					<div>
-						<span className="font-mono text-xs uppercase tracking-widest block mb-4">
-							Affiliations
-						</span>
-						<a
-							href="https://mwangalabs.co.ke"
-							className="font-mono text-sm uppercase tracking-wider hover:opacity-50 transition-opacity"
-						>
-							MwangaLabs
-						</a>
-					</div>
 					<div>
 						<span className="font-mono text-xs uppercase tracking-widest block mb-4">
 							Resources
