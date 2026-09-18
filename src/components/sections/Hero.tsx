@@ -196,6 +196,7 @@ const ROLES = [
 	"Data Scientist",
 	"CyberSecurity Analyst",
 	"Sole-Maintainer, RustyWoof",
+	"Co-Founder & CTO, MwangaLabs",
 ];
 
 function RoleCycler() {
@@ -313,7 +314,7 @@ export default function Hero() {
 					<div className="overflow-hidden h-[1.3em] flex items-end justify-center pb-2 md:pb-4">
 						<motion.div
 							variants={lineVariants}
-							className="origin-top text-(--color-text-secondary) leading-none"
+							className="origin-top text-(--color-text-secondary) opacity-70 leading-none"
 						>
 							<FontScrambleText
 								text="Resilience"
@@ -325,7 +326,7 @@ export default function Hero() {
 
 				<motion.div
 					variants={blurFadeVariants}
-					className="flex items-center justify-center font-mono text-sm md:text-base lg:text-lg text-(--color-text-secondary) uppercase tracking-widest mt-6 md:mt-10"
+					className="flex items-center justify-center font-mono text-sm md:text-base lg:text-lg text-(--color-text-secondary) opacity-0 uppercase tracking-widest mt-6 md:mt-10"
 				>
 					<RoleCycler />
 				</motion.div>

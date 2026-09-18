@@ -1,12 +1,10 @@
 # Ian Ramy - Technical Profile Digest
 
-_Last updated: 2026-09-04_
-
-> Ian Ramy is a multi-disciplinary technologist operating at the intersection of
-> Software Engineering, Data Science, and Cyber Security. He designs and ships
-> scalable, production-grade software, extracts actionable intelligence from
-> large and messy datasets, and hardens systems with zero-trust security
-> principles. He is the sole maintainer of Rustywoof.
+> [Ian Ramy](https://ianramy.co.ke) is the online handle for Ian Mwagore,
+> a multi-disciplinary technologist operating at the intersection of Software Engineering, Data Science,
+> and Cyber Security. He designs and ships scalable, production-grade software, extracts actionable
+> intelligence from large and messy datasets, and hardens systems with zero-trust security
+> principles. He is the creator & sole maintainer of Rustywoof and Co-Founder & CTO of Mwangalabs.
 
 ## About
 
@@ -62,3 +60,4 @@ approach to both client work and personal projects like Rustywoof.
 - [GitHub](https://github.com/ianramy)
 - [LinkedIn](https://www.linkedin.com/in/ian-ramy)
 - [Discord](https://www.discordapp.com/users/1366810539854008360/)
+- [Mwangalabs](https://mwangalabs.com)

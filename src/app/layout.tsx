@@ -87,7 +87,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body
-				className={`${allFontVariables} bg-white text-slate-900 dark:bg-slate-900 dark:text-white antialiased`}
+				className={`${allFontVariables} bg-bg text-text antialiased`}
 			>
 				<JsonLd />
 				<ThemeProvider>

@@ -78,14 +78,14 @@ export default function Navbar() {
 					{/* Desktop Nav */}
 					<div
 						className="hidden md:flex flex-1 justify-center items-center space-x-12 font-mono
-						text-sm uppercase tracking-widest text-slate-900 dark:text-white"
+						text-sm uppercase tracking-widest text-text"
 					>
 						{navLinks.map((link) => (
 							<button
 								type="button"
 								key={link.href}
 								onClick={() => handleNavClick(link.href.replace("#", ""))}
-								className="relative group hover:opacity-60 transition-opacity"
+								className="relative flex items-center justify-center hover:opacity-50 transition-opacity cursor-pointer"
 							>
 								{link.label}
 							</button>
@@ -98,7 +98,7 @@ export default function Navbar() {
 							type="button"
 							onClick={toggleTheme}
 							aria-label="Toggle Theme"
-							className="w-6 h-6 flex items-center justify-center hover:opacity-60 transition-opacity"
+							className="w-6 h-6 flex items-center justify-center hover:opacity-60 transition-opacity cursor-pointer"
 						>
 							{theme === "dark" ? (
 								<svg

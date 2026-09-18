@@ -129,7 +129,7 @@ export default function Skills() {
 				>
 					{/* LEFT — Category Revolver with drag */}
 					<div className="relative h-full flex flex-col justify-center border-r border-(--color-text-secondary)/10 md:border-none pr-4 md:pr-0">
-						<span className="font-mono text-[10px] md:text-[11px] text-(--color-text-secondary)/60 tracking-widest block mb-6 md:mb-10 text-center md:text-left">
+						<span className="font-mono text-[10px] md:text-[11px] text-(--color-text-secondary) opacity-70 tracking-widest block mb-6 md:mb-10 text-center md:text-left">
 							{String(catIndex + 1).padStart(2, "0")} /{" "}
 							{String(totalCats).padStart(2, "0")}
 						</span>
@@ -175,8 +175,8 @@ export default function Skills() {
 											}}
 											className={`block font-heading uppercase tracking-heading transition-all duration-500 ${
 												isActive
-													? "text-xl md:text-4xl lg:text-5xl text-(--color-text-primary)"
-													: "text-xs md:text-xl lg:text-2xl text-(--color-text-secondary)"
+													? "text-sm md:text-base lg:text-2xl text-(--color-text-primary)"
+													: "text-xs md:text-sm lg:text-lg text-(--color-text-secondary)"
 											}`}
 										>
 											{group.category}
@@ -295,7 +295,7 @@ export default function Skills() {
 														}}
 														className="absolute top-[130%] left-1/2 -translate-x-1/2 w-50 md:w-[320px] text-center pointer-events-none z-30"
 													>
-														<h3 className="text-lg md:text-2xl font-heading text-(--color-text-primary) mb-2">
+														<h3 className="font-mono text-lg md:text-2xl text-(--color-text-primary) mb-2">
 															{item.title}
 														</h3>
 														<div className="mb-3">
@@ -326,7 +326,7 @@ export default function Skills() {
 										key={`tracker-${catIndex}-${item.title}`}
 										onClick={() => setItemIndex(idx)}
 										aria-label={`Show ${item.title}`}
-										className="h-1 md:h-1.5 bg-(--color-text-secondary)/20 rounded-full flex-1 overflow-hidden transition-all duration-300 hover:bg-(--color-text-secondary)/40"
+										className="h-1 md:h-1.5 bg-(--color-text-secondary) rounded-full flex-1 overflow-hidden transition-all duration-300 hover:bg-(--color-text-secondary)"
 									>
 										<div
 											className="h-full bg-(--color-accent) origin-left"

@@ -22,10 +22,10 @@ export default function About() {
 							<span className="font-mono text-xs text-(--color-accent) uppercase tracking-widest">
 								0{idx + 1} / Method
 							</span>
-							<h2 className="text-4xl md:text-6xl font-heading text-(--color-text-primary) leading-tight">
+							<h2 className="text-3xl md:text-3xl font-heading text-(--color-text-primary) leading-tight">
 								{facet.title}
 							</h2>
-							<p className="font-body text-(--color-text-secondary) text-lg md:text-xl max-w-md leading-relaxed">
+							<p className="font-mono text-(--color-text-secondary) text-sm md:text-base max-w-md leading-relaxed">
 								{facet.text}
 							</p>
 						</div>

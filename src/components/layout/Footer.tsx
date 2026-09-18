@@ -32,7 +32,7 @@ export default function Footer() {
 						<h3 className="text-4xl md:text-6xl font-heading uppercase tracking-tight">
 							Ian Ramy
 						</h3>
-						<p className="font-mono text-xs uppercase tracking-widest mt-4 max-w-xs">
+						<p className="font-mono text-xs text-(--color-text-secondary) opacity-70 uppercase tracking-widest mt-4 max-w-xs">
 							Software Engineer • Data Scientist • Cybersecurity Analyst
 						</p>
 					</div>
@@ -41,10 +41,21 @@ export default function Footer() {
 				{/* Links Grid */}
 				<div className="flex flex-col gap-12">
 					<div>
-						<span className="font-mono text-xs uppercase tracking-widest block mb-4">
+						<span className="font-mono text-xs text-(--color-accent) uppercase tracking-widest block mb-4">
+							Affiliations
+						</span>
+						<a
+							href="https://mwangalabs.com"
+							className="font-mono text-sm uppercase tracking-wider text-(--color-text-secondary) opacity-90 hover:opacity-50 transition-opacity"
+						>
+							MwangaLabs
+						</a>
+					</div>
+					<div>
+						<span className="font-mono text-xs text-(--color-accent) uppercase tracking-widest block mb-4">
 							Resources
 						</span>
-						<ul className="space-y-4 font-mono text-sm uppercase tracking-wider">
+						<ul className="space-y-4 font-mono text-sm text-(--color-text-secondary) opacity-90 transition-opacity uppercase tracking-wider">
 							<li>
 								<Link
 									href="/terms"
@@ -75,7 +86,7 @@ export default function Footer() {
 
 				{/* Socials Grid */}
 				<div className="flex flex-col gap-4">
-					<span className="font-mono text-xs uppercase tracking-widest block mb-2">
+					<span className="font-mono text-xs text-(--color-accent) uppercase tracking-widest block mb-2">
 						Network
 					</span>
 					{socialLinks.map((social) => (
@@ -85,7 +96,7 @@ export default function Footer() {
 							target="_blank"
 							rel="noopener noreferrer"
 							aria-label={`Follow Ian on ${social.label}`}
-							className="group flex items-center gap-4 font-mono text-sm uppercase tracking-wider hover:opacity-50 transition-opacity pb-4"
+							className="group flex items-center gap-4 font-mono text-sm uppercase tracking-wider text-(--color-text-secondary) opacity-90 hover:opacity-50 transition-opacity pb-4"
 						>
 							<div
 								className="w-4 h-4 bg-current"
@@ -104,7 +115,7 @@ export default function Footer() {
 			</div>
 
 			{/* Footer Bottom */}
-			<div className="max-w-7xl mx-auto mt-24 pt-8 border-t border-(--color-border-grid) flex flex-col md:flex-row justify-between items-center font-mono text-xs uppercase tracking-widest">
+			<div className="text-(--color-text-secondary) opacity-90 max-w-full mx-auto mt-24 pt-8 border-t border-(--color-border-grid) flex flex-col md:flex-row justify-between items-center font-mono text-xs uppercase tracking-widest">
 				<p>© {new Date().getFullYear()} IAN RAMY.</p>
 				<p className="mt-4 md:mt-0"> ALL RIGHTS RESERVED.</p>
 			</div>

@@ -53,7 +53,9 @@ export default function InstallPrompt() {
 
 	if (isIOS) {
 		return (
-			<div className="fixed bottom-0 left-0 w-full bg-background border-t border-foreground/10 p-4 z-50 text-center font-sans text-[10px] uppercase tracking-widest text-foreground">
+			<div 
+				className="fixed bottom-4 right-4 z-50 bg-foreground text-(--color-text-secondary) opacity-90 px-4 py-2 font-sans text-[10px] uppercase tracking-widest transition-opacity hover:opacity-90"
+			>
 				To install: Tap Share then "Add to Home Screen"
 			</div>
 		);
@@ -66,7 +68,7 @@ export default function InstallPrompt() {
 				onClick={() => {
 					installPrompt.prompt().catch(console.error);
 				}}
-				className="fixed bottom-4 right-4 z-50 bg-foreground text-background px-4 py-2 font-sans text-[10px] uppercase tracking-widest transition-opacity hover:opacity-90"
+				className="fixed bottom-4 right-4 z-50 bg-foreground text-(--color-text-secondary) opacity-90 px-4 py-2 font-sans text-[10px] uppercase tracking-widest transition-opacity hover:opacity-90"
 			>
 				Install App
 			</button>

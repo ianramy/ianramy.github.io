@@ -1,4 +1,5 @@
 /* src/styles/global.css */
+
 @import "tailwindcss";
 
 @theme {
@@ -9,26 +10,28 @@
 	--tracking-heading: -0.06em;
 }
 
-/* LIGHT MODE (Default) - Inverted Obsidian */
+/* LIGHT MODE - Paper & Graphite */
 :root {
-	--color-bg-base: #ffffff;
-	--color-text-primary: #000000;
-	--color-text-secondary: #666666;
-	--color-border-grid: #e5e5e5;
-	--color-accent: #000000;
+	--color-bg-base: #f5f6f8;
+	--color-text-primary: #14181f;
+	--color-text-secondary: #5a6270;
+	--color-border-grid: #e1e4ea;
+	--color-accent: #ff8811;
+	--color-accent-soft: #ee964b;
 	--logo-filter: invert(0);
 
 	background-color: var(--color-bg-base);
 	color: var(--color-text-primary);
 }
 
-/* DARK MODE - Pure Obsidian */
+/* DARK MODE - Indigo & Gold */
 .dark {
-	--color-bg-base: #000000;
-	--color-text-primary: #ffffff;
-	--color-text-secondary: #888888;
-	--color-border-grid: #262626;
-	--color-accent: #ffffff;
+	--color-bg-base: #0d1017;
+	--color-text-primary: #eef0f4;
+	--color-text-secondary: #8b93a3;
+	--color-border-grid: #232834;
+	--color-accent: #ff8811;
+	--color-accent-soft: #ee964b;
 	--logo-filter: invert(1);
 
 	background-color: var(--color-bg-base);
@@ -49,11 +52,11 @@ body {
 }
 
 /*
-  Premium Selection Inversion
-  Instead of default blue highlighting, selected text exactly inverts
+  Signature Selection
+  Selected text takes the accent instead of a flat inversion
 */
 ::selection {
-	background-color: var(--color-text-primary);
+	background-color: var(--color-accent);
 	color: var(--color-bg-base);
 }
 

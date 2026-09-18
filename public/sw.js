@@ -1,6 +1,6 @@
 // public/sw.js
 
-const CACHE_NAME = 'ianramy-portfolio-v2';
+const CACHE_NAME = 'ianramy-portfolio-v3';
 
 const STATIC_ASSETS = [
   '/',

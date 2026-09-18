@@ -12,7 +12,6 @@ export default function JsonLd() {
 				"@type": "ProfilePage",
 				"@id": "https://ianramy.co.ke/#profilepage",
 				url: "https://ianramy.co.ke",
-				dateModified: "2026-09-04",
 				mainEntity: { "@id": "https://ianramy.co.ke/#person" },
 			},
 			{
@@ -21,8 +20,12 @@ export default function JsonLd() {
 				name: "Ian Ramy",
 				alternateName: ["ianramy", "Ian Mwagore"],
 				disambiguatingDescription:
-					"Ian Ramy (online handle name for Ian Mwagore) is an independent software engineer and open-source maintainer.",
-				jobTitle: "Full-Stack Software Engineer & Maintainer, Rustywoof",
+					"Ian Ramy (online handle name for Ian Mwagore) is a software engineer and open-source maintainer. He is the creator & sole maintainer of Rustywoof and Co-Founder & CTO of Mwangalabs.",
+				jobTitle: [
+					"Full-Stack Software Engineer",
+					"Creator & Sole Maintainer, Rustywoof",
+					"Co-Founder & CTO, Mwangalabs",
+				],
 				description:
 					"Full-Stack Secure Data Engineer specializing in TypeScript, Rust, Machine Learning, and Zero-Trust Security architectures.",
 				knowsAbout: [
@@ -34,6 +37,11 @@ export default function JsonLd() {
 					"Zero-Trust Architecture",
 				],
 				url: "https://ianramy.co.ke",
+				worksFor: {
+					"@type": "Organization",
+					name: "MwangaLabs",
+					url: "https://mwangalabs.com",
+				},
 				image: "https://ianramy.co.ke/images/logo-black.jpg",
 				alumniOf: {
 					"@type": "CollegeOrUniversity",
