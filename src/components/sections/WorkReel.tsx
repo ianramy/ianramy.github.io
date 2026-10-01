@@ -41,7 +41,7 @@ export default function WorkReel() {
 								{project.desc}
 							</p>
 						</div>
-						
+
 						{project.link && (
 							<a
 								href={project.link}

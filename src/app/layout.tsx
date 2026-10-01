@@ -86,9 +86,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body
-				className={`${allFontVariables} bg-bg text-text antialiased`}
-			>
+			<body className={`${allFontVariables} bg-bg text-text antialiased`}>
 				<JsonLd />
 				<ThemeProvider>
 					<SmoothScrolling>

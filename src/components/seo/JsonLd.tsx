@@ -1,11 +1,87 @@
 // src/components/seo/JsonLd.tsx
 
+import Script from "next/script";
+
+interface PersonNode {
+	"@type": "Person";
+	"@id": string;
+	name: string;
+	alternateName?: string[];
+	disambiguatingDescription?: string;
+	jobTitle?: string[];
+	description?: string;
+	knowsAbout?: string[];
+	url: string;
+	worksFor?: {
+		"@type": "Organization";
+		name: string;
+		url?: string;
+	};
+	image?: string;
+	alumniOf?: {
+		"@type": "CollegeOrUniversity" | "Organization";
+		name: string;
+		url?: string;
+	};
+	owns?: { "@id": string } | { "@id": string }[];
+	sameAs?: string[];
+}
+
+interface ProfilePageNode {
+	"@type": "ProfilePage";
+	"@id": string;
+	url: string;
+	mainEntity: { "@id": string };
+}
+
+interface SoftwareSourceCodeNode {
+	"@type": "SoftwareSourceCode";
+	"@id": string;
+	name: string;
+	author: { "@id": string };
+	description?: string;
+	programmingLanguage?: string;
+	codeRepository?: string;
+	sameAs?: string[];
+}
+
+interface WebSiteNode {
+	"@type": "WebSite";
+	"@id": string;
+	name: string;
+	url: string;
+	creator?: { "@id": string };
+	about?: {
+		"@type": "Organization";
+		name: string;
+		description?: string;
+	};
+}
+
+type GraphNode =
+	| ProfilePageNode
+	| PersonNode
+	| SoftwareSourceCodeNode
+	| WebSiteNode;
+
+interface StructuredData {
+	"@context": "https://schema.org";
+	"@graph": GraphNode[];
+}
+
 function safeJsonLd(data: unknown): string {
-	return JSON.stringify(data).replace(/</g, "\\u003c");
+	// Escape characters that could break out of the <script> context
+	// or be (mis)interpreted by the HTML parser.
+	return JSON.stringify(data)
+		.replace(/</g, "\\u003c")
+		.replace(/>/g, "\\u003e")
+		.replace(/&/g, "\\u0026")
+		.replace(/\u2028/g, "\\u2028")
+		.replace(/\u2029/g, "\\u2029");
 }
 
 export default function JsonLd() {
-	const structuredData = {
+	const _structuredData: StructuredData = {
 		"@context": "https://schema.org",
 		"@graph": [
 			{
@@ -87,6 +163,11 @@ export default function JsonLd() {
 	};
 
 	return (
-		<script type="application/ld+json">{safeJsonLd(structuredData)}</script>
+		<Script
+			id="person-jsonld"
+			type="application/ld+json"
+			// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD requires raw script injection; content is server-generated and escaped via safeJsonLd()
+			dangerouslySetInnerHTML={{ __html: safeJsonLd(_structuredData) }}
+		/>
 	);
 }

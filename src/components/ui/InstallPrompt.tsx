@@ -53,9 +53,7 @@ export default function InstallPrompt() {
 
 	if (isIOS) {
 		return (
-			<div 
-				className="fixed bottom-4 right-4 z-50 bg-foreground text-(--color-text-secondary) opacity-90 px-4 py-2 font-sans text-[10px] uppercase tracking-widest transition-opacity hover:opacity-90"
-			>
+			<div className="fixed bottom-4 right-4 z-50 bg-foreground text-(--color-text-secondary) opacity-90 px-4 py-2 font-sans text-[10px] uppercase tracking-widest transition-opacity hover:opacity-90">
 				To install: Tap Share then "Add to Home Screen"
 			</div>
 		);
